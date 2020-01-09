@@ -1,1 +1,5 @@
-<p>poduct-alerts works!</p>
+<p *ngIf="product.price > 700">
+  <button nbButton hero status="info" (click)="notify.emit()">
+    Notify Me
+  </button>
+</p>

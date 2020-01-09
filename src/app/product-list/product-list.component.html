@@ -7,7 +7,11 @@
   </h3>
   <p *ngIf="product.description">Description: {{ product.description }}</p>
   <p *ngIf="!product.description" class="nope">No Description Available</p>
-  <button (click)="share()">Share</button>
+  <button nbButton hero status="success" (click)="share()">Share</button>
+  <app-poduct-alerts
+    [product]="product"
+    (notify)="onNotify()"
+  ></app-poduct-alerts>
 </div>
 
 <!-- 
