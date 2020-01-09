@@ -1,4 +1,5 @@
 import { BrowserModule } from "@angular/platform-browser";
+import { RouterModule } from "@angular/router";
 import { NgModule } from "@angular/core";
 
 import { AppRoutingModule } from "./app-routing.module";
@@ -8,11 +9,21 @@ import { PoductAlertsComponent } from "./poduct-alerts/poduct-alerts.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NbThemeModule, NbLayoutModule, NbButtonModule } from "@nebular/theme";
 import { NbEvaIconsModule } from "@nebular/eva-icons";
+import { ProductDetailsComponent } from "./product-details/product-details.component";
 
 @NgModule({
-  declarations: [AppComponent, ProductListComponent, PoductAlertsComponent],
+  declarations: [
+    AppComponent,
+    ProductListComponent,
+    PoductAlertsComponent,
+    ProductDetailsComponent
+  ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot([
+      { path: "", component: ProductListComponent },
+      { path: "products/:productId", component: ProductDetailsComponent }
+    ]),
     AppRoutingModule,
     BrowserAnimationsModule,
     NbThemeModule.forRoot({ name: "cosmic" }),
