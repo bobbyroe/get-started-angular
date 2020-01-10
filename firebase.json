@@ -1,0 +1,6 @@
+{
+  "hosting": {
+    "public": "dist/get-started",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}
