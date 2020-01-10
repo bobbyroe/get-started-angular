@@ -8,6 +8,7 @@ import { AppComponent } from "./app.component";
 import { ProductListComponent } from "./product-list/product-list.component";
 import { PoductAlertsComponent } from "./poduct-alerts/poduct-alerts.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { ReactiveFormsModule } from "@angular/forms";
 import { NbThemeModule, NbLayoutModule, NbButtonModule } from "@nebular/theme";
 import { NbEvaIconsModule } from "@nebular/eva-icons";
 import { ProductDetailsComponent } from "./product-details/product-details.component";
@@ -36,6 +37,7 @@ import { ShippingComponent } from "./shipping/shipping.component";
     ]),
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     NbThemeModule.forRoot({ name: "cosmic" }),
     NbLayoutModule,
     NbEvaIconsModule,
