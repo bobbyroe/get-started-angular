@@ -14,7 +14,21 @@ export class ProductListComponent {
     window.alert("The product has been shared!");
   }
   onNotify() {
-    window.alert("🗿 You have been notified! 👹");
+    const query = `{
+      wazaIsOnNidan {
+        rank
+      }
+    }`;
+    const options = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ query })
+    };
+    fetch("http://localhost:4000/", options)
+      .then(response => response.json())
+      .then(jsonRes => console.log(jsonRes.data));
+
+    // window.alert("🗿 You have been notified! 👹");
   }
 }
 
