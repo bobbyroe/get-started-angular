@@ -15,8 +15,8 @@ export class ProductListComponent {
   }
   onNotify() {
     const query = `{
-      wazaIsOnNidan {
-        rank
+      waza {
+        id
       }
     }`;
     const options = {
